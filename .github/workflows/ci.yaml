@@ -27,4 +27,4 @@ jobs:
 
   cd:
     if: ${{ github.ref == 'refs/heads/main' }}
-    uses: cybercyst/go-api/.github/workflows/cd.yaml@main
+    uses: cybercyst/github-actions/.github/workflows/cd.yaml@main
