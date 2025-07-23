@@ -30,7 +30,7 @@ jobs:
     steps:
       - name: Check if condition
         run: |
-          echo "Condition: ${{ github.ref }}"
+          echo "Condition: ${{ github.ref == 'ref/heads/main' }}"
 
   cd:
     if: ${{ github.ref == 'refs/heads/main' }}
