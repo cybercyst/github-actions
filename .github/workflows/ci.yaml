@@ -25,6 +25,13 @@ jobs:
           context: .
           target: test
 
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if condition
+        run: |
+          echo "Condition: ${{ github.ref }}"
+
   cd:
     if: ${{ github.ref == 'refs/heads/main' }}
     uses: cybercyst/github-actions/.github/workflows/cd.yaml@main
