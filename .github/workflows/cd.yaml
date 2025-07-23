@@ -8,9 +8,6 @@ on:
 
 jobs:
   changes:
-    if: >
-      github.event.workflow_run.conclusion == 'success' &&
-      github.event.workflow_run.head_branch == 'main'
     name: Detect Changes
     runs-on: ubuntu-latest
     outputs:
