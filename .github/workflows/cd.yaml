@@ -20,7 +20,7 @@ jobs:
         run: |
           ver=$(git describe --abbrev=0 --match "v*.*.*")
           echo "::set-output name=version::$ver"
-      - uses: dorny/paths-filter@v2
+      - uses: dorny/paths-filter@v3
         id: changes
         with:
           base: ${{ steps.version.outputs.version }}
